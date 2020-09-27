@@ -7,19 +7,9 @@ import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import createStore from "./store";
 
-const store = createStore();
+import "semantic-ui-css/semantic.min.css";
 
-setTimeout(() => {
-  store.dispatch({
-    type: "SET_BOOKS",
-    payload: [
-      {
-        id: 0,
-        title: "Hello World",
-      },
-    ],
-  });
-}, 2000);
+const store = createStore();
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,17 +1,20 @@
 const initialState = {
-  books: [],
+  isReady: false,
+  items: null,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case "SET_BOOKS":
       return {
-        books: action.payload,
+        ...state,
+        items: action.payload,
+        isReady: true,
       };
-    case "ADD_BOOKS":
+    case "SET_IS_READY":
       return {
         ...state,
-        books: [...state.books, action.payload],
+        isReady: action.payload,
       };
     default:
       return state;
