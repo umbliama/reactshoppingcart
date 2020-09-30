@@ -1,13 +1,11 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as bookActions from "../actions/books";
-import App from "../components/App";
+import App from "../components/App/App";
 import orderBy from "lodash/orderBy";
 
 const sortBy = (books, filterBy) => {
   switch (filterBy) {
-    case "price_high":
-      return orderBy(books, "price", "desc");
     case "price_high":
       return orderBy(books, "price", "asc");
     case "price_low":

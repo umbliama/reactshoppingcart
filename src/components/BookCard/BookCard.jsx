@@ -1,11 +1,12 @@
 import React from "react";
 import { Card, Icon, Image, Button } from "semantic-ui-react";
+import "./BookCard.scss";
 
 const BookCard = (book) => {
   const { title, author, price, image, addToCart, addedCount } = book;
 
   return (
-    <Card>
+    <Card className="book__card">
       <Image src={image} wrapped ui={false} />
       <Card.Content>
         <Card.Header>{title}</Card.Header>
@@ -17,7 +18,7 @@ const BookCard = (book) => {
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a href="#">
+        <a href="/#">
           <Icon name="rub" />
           {price}
         </a>

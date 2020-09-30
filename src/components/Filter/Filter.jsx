@@ -1,9 +1,9 @@
 import React from "react";
 import { Input, Menu } from "semantic-ui-react";
-import { setSearchQuery } from "../actions/filter";
+import "./Filter.scss";
 
 const Filter = ({ setFilter, filterBy, searchQuery, setSearchQuery }) => (
-  <Menu secondary>
+  <Menu className="menu--secondary" secondary>
     <Menu.Item
       active={filterBy === "all"}
       onClick={setFilter.bind(this, "all")}

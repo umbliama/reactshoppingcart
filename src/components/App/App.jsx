@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Container } from "semantic-ui-react";
-import BookCard from "../containers/BookCard";
-import Filter from "../containers/Filter";
-import Menu from "../containers/Menu";
+import BookCard from "../../containers/BookCard";
+import Filter from "../../containers/Filter";
+import Menu from "../../containers/Menu";
 import { Card } from "semantic-ui-react";
+import "./App.scss";
 
 class App extends Component {
   componentWillMount() {
@@ -19,7 +20,7 @@ class App extends Component {
       <Container>
         <Menu />
         <Filter setFilter={setFilter} />
-        <Card.Group itemsPerRow={4}>
+        <Card.Group className="books__list" itemsPerRow={4}>
           {!isReady
             ? "Загрузка..."
             : books.map((book, i) => <BookCard key={i} {...book} />)}

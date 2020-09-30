@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as cartActions from "../actions/cart";
-import BookCard from "../components/BookCard";
+import BookCard from "../components/BookCard/BookCard";
 
 const mapStateToProps = ({ cart }, { id }) => ({
   addedCount: cart.items.reduce(

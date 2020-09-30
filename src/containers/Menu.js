@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as cartActions from "../actions/filter";
-import Menu from "../components/Menu";
+import Menu from "../components/Menu/Menu";
 import uniqBy from "lodash/uniqBy";
 
 const mapStateToProps = ({ cart }) => ({

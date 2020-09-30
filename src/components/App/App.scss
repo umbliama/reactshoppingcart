@@ -1,0 +1,10 @@
+@media (max-width: 480px) {
+  .books {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      align-content: center;
+    }
+  }
+}
